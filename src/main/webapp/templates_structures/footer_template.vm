@@ -1,0 +1,48 @@
+<div class="footerwrapper">
+    <div class="footerleft">
+        <div class="topallign">
+            <span class="bold">$titel_eerste_kolom.getData()</span>
+            <div class="footeradres">
+                <div>$titel_eerste_kolom.adresregel_1.getData()</div>
+                <div>$titel_eerste_kolom.adresregel_2.getData()</div>
+            </div>
+            <div class="footercontact">
+                <div>
+                    <span>$titel_eerste_kolom.email_tekst.getData()</span>
+                    <span>$titel_eerste_kolom.email_tekst.email_adres.getData()</span>
+                </div>
+                <div>
+                    <span>$titel_eerste_kolom.telefoon_tekst.getData()</span>
+                    <span>$titel_eerste_kolom.telefoon_tekst.telefoon_nummer.getData()</span>
+                </div>
+            </div>
+        </div>
+        <div class="footersocial bottomallign">
+            <div>$titel_eerste_kolom.social_titel.getData()</div>
+            #foreach($social in $titel_eerste_kolom.social_titel.social_icoon.getSiblings())
+                <a href="$social.social_url.getUrl()"><img alt="$social.social_url.getUrl()" src="$social.getData()" /></a>
+            #end
+        </div>
+    </div>
+    <div class="footercenter">
+        <div class="topallign">
+            <span class="bold">$titel_tweede_kolom.getData()</span>
+            <div class="adviseurslocatie">
+                #foreach($locatie in $titel_tweede_kolom.adviseurs_locatie.getSiblings())
+                    <a href="$locatie.adviseur_link.getUrl()">$locatie.getData()</a>
+                #end
+            </div>
+        </div>
+        <div class="adviseurszoeken bottomallign">
+            <span>$titel_tweede_kolom.adviseur_zoeken_titel.getData()</span>
+            <a href="$locatie.adviseur_link.getUrl()"><span class="zlmbutton">$titel_tweede_kolom.adviseur_zoeken_titel.adviseur_button_tekst.getData()</span></a>
+        </div>
+    </div>
+    <div class="footerright bottomallign">
+        <img alt="Image derde kolom" src="$Image_derde_kolom.getData()" />
+        <div>
+            $Image_derde_kolom.tekst.getData()
+        </div>
+    </div>
+</div>
+

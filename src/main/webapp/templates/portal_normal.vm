@@ -14,71 +14,67 @@
 
 <body class="$css_class">
     <div class="backgroundhelper">
-        <a href="#main-content" id="skip-to-content">#language ("skip-to-content")</a>
+        <div class="centerwrapper">
+            <a href="#main-content" id="skip-to-content">#language ("skip-to-content")</a>
 
-        $theme.include($body_top_include)
+            $theme.include($body_top_include)
 
-        #dockbar()
+            #dockbar()
 
-        <div class="container-fluid" id="wrapper">
-                <header id="banner" role="banner">
-                        <div id="heading">
-                                <h1 class="site-title">
-                                        <a class="$logo_css_class" href="$site_default_url" title="#language_format ("go-to-x", [$site_name])">
-                                                <img alt="$logo_description" height="$site_logo_height" src="$site_logo" width="$site_logo_width" />
+            <div class="container-fluid" id="wrapper">
+                    <header id="banner" role="banner">
+                            <div id="heading">
+                                    <h1 class="site-title">
+                                            <a class="$logo_css_class" href="$site_default_url" title="#language_format ("go-to-x", [$site_name])">
+                                                    <img alt="$logo_description" height="$site_logo_height" src="$site_logo" width="$site_logo_width" />
 
-                                                <!--#if ($show_site_name)
-                                                        <span class="site-name" title="#language_format ("go-to-x", [$site_name])">
-                                                                $site_name
-                                                        </span>
-                                                #end
-                                                -->
-                                        </a>
+                                                    <!--#if ($show_site_name)
+                                                            <span class="site-name" title="#language_format ("go-to-x", [$site_name])">
+                                                                    $site_name
+                                                            </span>
+                                                    #end
+                                                    -->
+                                            </a>
 
-                                </h1>
+                                    </h1>
 
-                                <h2 class="page-title">
-                                        <span>$the_title</span>
-                                </h2>
-                        </div>
+                                    <h2 class="page-title">
+                                            <span>$the_title</span>
+                                    </h2>
+                            </div>
 
-                        #if ($has_navigation || $is_signed_in)
-                                #parse ("$full_templates_path/navigation.vm")
-                        #end
-                </header>
+                            #if ($has_navigation || $is_signed_in)
+                                    #parse ("$full_templates_path/navigation.vm")
+                            #end
+                    </header>
 
-                <div id="content">
+                    <div id="content">
 
-                        #if ($selectable)
-                                $theme.include($content_include)
-                        #else
-                                $portletDisplay.recycle()
+                            #if ($selectable)
+                                    $theme.include($content_include)
+                            #else
+                                    $portletDisplay.recycle()
 
-                                $portletDisplay.setTitle($the_title)
+                                    $portletDisplay.setTitle($the_title)
 
-                                $theme.wrapPortlet("portlet.vm", $content_include)
-                        #end
+                                    $theme.wrapPortlet("portlet.vm", $content_include)
+                            #end
+                    </div>
+
+            </div> 
+            <footer id="footer" role="contentinfo">
+                <div class="topfooter">
+                    <span>
+                        $theme.getSetting("footer_slogan")
+                    </span>
                 </div>
-        </div> 
-        <footer id="footer" role="contentinfo">
-            <div class="topfooter">
-                <span>
-                    $theme.getSetting("footer_slogan")
-                </span>
-            </div>
-            <div class="bottomfooter">
-                <div class="footerleft">
-
+                <div class="bottomfooter">               
+                    #if ($footer_section)
+                            $footer_section
+                    #end
                 </div>
-                <div class="footercenter">
-
-                </div>
-                <div class="footerdright">
-
-                </div>
-            </div>
-        </footer>
-
+            </footer>
+        </div>
         $theme.include($body_bottom_include)
 
         $theme.include($bottom_include)

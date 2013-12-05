@@ -1,1 +1,7 @@
 #set ($css_class = "${css_class} dockbar-split")
+
+#if ($theme_settings.footer_id)
+	#set ($footer_section = $journalContentUtil.getContent($group_id, $theme_settings.footer_id, null, "$locale", $theme_display))
+#else
+	#set ($footer_section = $journalContentUtil.getContent($group_id, "FOOTER-BLURB", null, "$locale", $theme_display))
+#end

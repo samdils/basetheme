@@ -8,8 +8,15 @@
 
 /* ---------- Wrapper ---------- */
 
+.centerwrapper{
+    margin: auto;
+    min-height: 100%;
+    width: 100%;
+    max-width: 960px;
+}
+    
 #wrapper {
-    padding: 0em 5em 0;
+    padding: 0;
     width: 960px;
     margin-left: auto;
     margin-right: auto;

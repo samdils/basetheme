@@ -16,6 +16,9 @@
     display: block;
 }
 
+.bold{
+    font-weight: bold; 
+}
 html{
     height: 100%;
 }

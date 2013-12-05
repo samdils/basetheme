@@ -12,6 +12,11 @@
                      type="textarea"
                      value=""
                 />
+                <setting configurable="true"
+                     key="footer_id"
+                     type="textarea"
+                     value=""
+                />
             </settings>
         </theme>
 </look-and-feel>             

@@ -8,14 +8,16 @@ and open the template in the editor.
     Author     : dilssam
 */
 
-footer{
+#footer{
     width: 100%;
+    max-width: 960px;
     //height: 100px;
     position: absolute;
     bottom: 0;
+    margin:auto;
 }
 
-footer .topfooter{
+#footer .topfooter{
     size: 14px;
     color: #118db0;
     //border-top: 2px solid #ccc;
@@ -26,7 +28,51 @@ footer .topfooter{
     background: url(../images/zlm/slogan_bol.png) center right no-repeat;
 }
 
-footer .bottomfooter{
+#footer .bottomfooter{
     //background: #118db0;
     height: 308px;
+    text-align: left;
+    size: 11px;
+    color: white;
+}
+#footer .bottomfooter .toppadding{
+    padding-top: 40px;
+}
+
+#footer .bottomfooter .footerwrapper{
+    height: 100%;
+}
+
+
+#footer .bottomfooter .footerleft,#footer .bottomfooter .footercenter{
+    width: 30%;
+    display: inline-block;
+    position: relative;
+    top:0px;
+    height: 100%;
+    vertical-align: top;
+    
+}
+
+#footer .bottomfooter .footerright{
+    display: inline-block;
+    position: absolute;
+    text-align: right;
+    vertical-align: bottom;
+    right: 0px;
+}
+
+#footer .footersocial , #footer .adviseurszoeken{
+    vertical-align: bottom;
+}
+
+#footer .bottomallign{
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    padding-bottom: 40px;
+}
+
+#footer .topallign{
+    vertical-align: top;
 }

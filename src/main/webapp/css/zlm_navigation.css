@@ -10,7 +10,8 @@ and open the template in the editor.
 
 #navigation{
     color:#333;
-    border-right: 2px solid #ccc;
+    //border: 1px solid #ccc;
+    z-index: 500;
 }
 
 #navigation .navbar-inner{
@@ -20,14 +21,19 @@ and open the template in the editor.
 }
 
 #navigation .navbar-inner ul{
-    border-left: 2px solid #ccc;
+    border: 1px solid #ccc;
+    border-bottom: 0px;
+    border-top: 0px;
     height: 100%;
 }
 
 #navigation .navbar-inner li{
-    border-right: 2px solid #ccc;
+    border: 1px solid #ccc;
+    border-bottom: 0px;
+    border-top: 0px;
     height: 100%;
     cursor: pointer;
+    z-index: 510;
 }
 
 #navigation .navbar-inner li a{
@@ -35,19 +41,11 @@ and open the template in the editor.
     padding-top: 1.5em;
 }
 
-#navigation .navbar-inner li.active{
-    box-shadow: 0px 4px 0px 2px #118db0,0px 0px 0px 2px #118db0;
-}
-
-#navigation .navbar-inner li:hover{
-    box-shadow: 0px 4px 0px 2px #118db0,0px 0px 0px 2px #118db0;
-    border: #118db0;
+#navigation .navbar-inner li:hover,#navigation .navbar-inner li.active{
+    box-shadow: 0px 4px 0px 1px #118db0,0px 0px 0px 1px #118db0;
+    border-color: #118db0;
     color: #118db0;
-}
-
-#navigation .navbar-inner li.active{
-    border: #118db0;
-    color: #118db0;
+    z-index: 511;
 }
 
 #navigation .navbar-inner li{
