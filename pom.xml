@@ -2,7 +2,7 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>jeroen.home</groupId>
+	<groupId>nl.zlm.theme</groupId>
 	<artifactId>zlm.theme</artifactId>
 	<packaging>war</packaging>
 	<name>zlm-theme</name>
@@ -12,11 +12,10 @@
 			<plugin>
 				<groupId>com.liferay.maven.plugins</groupId>
 				<artifactId>liferay-maven-plugin</artifactId>
-				<version>6.2.0-RC2</version>
+				<version>6.2.0-RC5</version>
 				<executions>
 					<execution>
 						<phase>generate-sources</phase>
-						
 					</execution>
 				</executions>
 				<configuration>
@@ -43,25 +42,25 @@
 		<dependency>
 			<groupId>com.liferay.portal</groupId>
 			<artifactId>portal-service</artifactId>
-			<version>6.2.0-RC2</version>
+			<version>6.2.0-RC5</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.liferay.portal</groupId>
 			<artifactId>util-bridges</artifactId>
-			<version>6.2.0-RC2</version>
+			<version>6.2.0-RC5</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.liferay.portal</groupId>
 			<artifactId>util-taglib</artifactId>
-			<version>6.2.0-RC2</version>
+			<version>6.2.0-RC5</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.liferay.portal</groupId>
 			<artifactId>util-java</artifactId>
-			<version>6.2.0-RC2</version>
+			<version>6.2.0-RC5</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
